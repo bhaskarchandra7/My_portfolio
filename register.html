@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register page</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    
+    <div class="container">   
+        <div class="skip">
+            <a href="index.html" >Skip</a> 
+        </div> 
+        <h1> New Registration</h1>
+        <h4>welcome to the page</h4>
+        <div class="input-container">
+            Name : <br><input type="text" name="name" placeholder="Enter your name" required>
+            Email : <br><input type="email" name="email" placeholder="Enter your Email" required>
+            Phone : <br><input type="tel" name="number" placeholder="Enter your Phone No." required>
+            password : <br><input type="password" id="pass1" name="password" placeholder="Enter Password" required>
+            confirm password : <br><input type="password" id="pass2" name="password2" placeholder="Confirm Password" required>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" required> Terms & condiction
+        </div>
+        <div class="btn" >
+            <button  id="bttn" type="submit" >submit</button>
+        </div>
+        
+        <div class="sign-up">Alredy have an Account ? 
+            <a href="signup.html"> Sign-up</a>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    document.getElementById('bttn').onclick = function() {
+    matchpassword();
+};
+        
+    
+    function matchpassword(){
+        var p1 = document.getElementById('pass1').value;
+        var p2 = document.getElementById('pass2').value;
+    if (p1==p2){
+        alert("enterrd");
+        window.location.href = "index.html";
+        
+    } else {
+       console.log("error");
+        alert("wrong password");
+        window.location.href = "register.html";
+    }
+}
+
+    
+
+
+
+</script>
+</html>
